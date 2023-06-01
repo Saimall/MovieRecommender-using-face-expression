@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="/static/button_style.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo">
+                <span>MovieMood</span>
+            </div>
+            <ul>
+                <li><a href="http://127.0.0.1:5000">HOME</a></li>
+                <li><a href="http://localhost:5000/templates/join_page.html">TEAM-INFO</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="links slide-left">
+                <div class="output" >
+                    {% if final_output %}
+                    <h2 style="font-family:Bio-Rhyme; color: bisque;margin:40px;font:40px;font-size:70px;">You look {{final_output}}</h2>
+                    {% endif %}
+                </div>
+                <h1 style="font-family:Bio-Rhyme; color: bisque;margin:40px;font:40px; font-size:70px">Let's have fun...!  <a href="http://localhost:5000/movies/{{final_output}}" class="btn">ENTER</a></h1>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
